@@ -1,0 +1,131 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Светло-голубой фон */
+    color: #2d3748; /* Темно-серый текст */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Белый фон контейнера */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #2c7a7b; /* Зеленый цвет для заголовка */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #3182ce; /* Синий цвет для подзаголовка */
+    margin-top: 30px;
+}
+
+/* Стили для формы */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a5568; /* Серый цвет для текста */
+    font-weight: bold;
+}
+
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e0; /* Серая рамка */
+    border-radius: 8px;
+    background-color: #f7fafc; /* Светло-бежевый фон для инпутов */
+    color: #2d3748; /* Темно-серый текст */
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Стили для кнопки "Сохранить" */
+#resource-form button {
+    background-color: #38a169; /* Зеленый цвет для кнопки */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Чтобы кнопка занимала всю ширину */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+#resource-form button:hover {
+    background-color: #2f855a; /* Темно-зеленый при наведении */
+    transform: scale(1.05); /* Увеличиваем кнопку на 5% */
+}
+
+/* Контейнер для кнопки "Посмотреть данные" */
+.button-container {
+    margin-top: 20px; /* Отступ сверху */
+    text-align: center; /* Выравнивание по центру */
+}
+
+/* Стили для кнопки "Посмотреть данные" */
+.view-data-button button {
+    background-color: #3182ce; /* Синий цвет для кнопки */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Чтобы кнопка занимала всю ширину */
+}
+
+.view-data-button button:hover {
+    background-color: #2c5282; /* Темно-синий при наведении */
+    transform: scale(1.05); /* Увеличиваем кнопку на 5% */
+}
+
+/* Стили для таблицы */
+.table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff; /* Белый фон таблицы */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0; /* Серая граница между строками */
+}
+
+th {
+    background-color: #3182ce; /* Синий цвет для заголовков таблицы */
+    color: white;
+}
+
+tr:hover {
+    background-color: #f7fafc; /* Светло-бежевый фон при наведении */
+}
+
+/* Стили для текста */
+p {
+    text-align: center;
+    color: #718096; /* Серый цвет для текста */
+}

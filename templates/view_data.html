@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр данных</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container-full">
+        <h1>Просмотр сохраненных данных</h1>
+
+        <!-- Кнопка для возврата на главную страницу -->
+        <a href="/" style="display: inline-block; margin-bottom: 20px;">
+            <button style="background-color: #2e7d32; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer;">
+                Вернуться на главную
+            </button>
+        </a>
+
+        <!-- Отображение данных из базы -->
+        <div class="table-container-full">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Тип ресурса</th>
+                        <th>Показания</th>
+                        <th>Комментарий</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Данные будут загружаться через JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="{{ url_for('static', filename='js/view_data.js') }}"></script>
+</body>
+</html>

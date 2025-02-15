@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Resource Tracker</title>
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ввод данных по потреблению ресурсов</h1>
+
+        <!-- Форма для добавления данных -->
+        <form id="resource-form">
+            <label for="electricity">Показания электроэнергии (кВт*ч):</label>
+            <input type="number" id="electricity" name="electricity" min="0" step="0.01" required />
+
+            <label for="gas">Показания газа (м³):</label>
+            <input type="number" id="gas" name="gas" min="0" step="0.01" required />
+
+            <label for="water">Показания воды (м³):</label>
+            <input type="number" id="water" name="water" min="0" step="0.01" required />
+
+            <label for="comment">Комментарий:</label>
+            <textarea id="comment" name="comment" placeholder="Добавьте комментарий..."></textarea>
+
+            <button type="submit">Сохранить</button>
+        </form>
+
+        <!-- Кнопка для просмотра данных -->
+        <div class="button-container">
+            <a href="/view_data" class="view-data-button">
+                <button>Посмотреть сохраненные данные</button>
+            </a>
+        </div>
+
+        <!-- Отображение данных из базы -->
+        <h2>Сохраненные данные</h2>
+        <div class="table-container">
+            {% if data %}
+                <table>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Тип ресурса</th>
+                        <th>Показания</th>
+                        <th>Комментарий</th>
+                    </tr>
+                    {% for row in data %}
+                    <tr>
+                        <td>{{ row[1] }}</td> <!-- Дата -->
+                        <td>{{ row[2] }}</td> <!-- Тип ресурса -->
+                        <td>{{ row[3] }}</td> <!-- Показания -->
+                        <td>{{ row[4] }}</td> <!-- Комментарий -->
+                    </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                <p>Нет сохраненных данных.</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Подключение JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
